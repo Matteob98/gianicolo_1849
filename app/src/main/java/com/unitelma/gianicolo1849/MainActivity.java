@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
 
         mBottomNav.setOnNavigationItemSelectedListener(this);
         mBottomNav.getMenu().getItem(2).setChecked(true);
+        mFAB.setImageDrawable(getResources().getDrawable(R.drawable.ic_itinerary_green));
 
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction().
@@ -37,19 +38,21 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
             @Override
             public void onClick(View v) {
                 mBottomNav.getMenu().getItem(2).setChecked(true);
-                mFAB.setColorFilter(R.color.colorPrimary);
+                //mFAB.setImageDrawable(getResources().getDrawable(R.drawable.ic_itinerary_green));
+                mFAB.setImageResource(R.drawable.ic_itinerary_green);
                 getSupportFragmentManager().beginTransaction().
                         replace(R.id.frameLayoutItineraryActivity, new ItineraryFragment()).commit();
             }
         });
-
-
     }
 
     /**
      * Import layout items from xml
      */
     private void layoutSettings() {
+
+        getWindow().setStatusBarColor(getResources().getColor(R.color.colorPrimaryDark));
+
         mToolbar = findViewById(R.id.toolbarItineraryActivity);
         mFAB = findViewById(R.id.floatingButtonItineraryActivity);
         mBottomNav = findViewById(R.id.bottomNavItineraryActivity);
@@ -66,7 +69,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
             case R.id.parking:
             case R.id.restaurant:
                 selectedFragment = new NotImplementedFragment();
-                mFAB.setColorFilter(null);
+                mFAB.setImageDrawable(getResources().getDrawable(R.drawable.ic_itinerary_light));
                 break;
             default:
                 return false;
