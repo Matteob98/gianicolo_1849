@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/toilet"
+        android:title="@string/Toilet"
+        android:icon="@drawable/ic_toilet"
+        android:orderInCategory="1" />
+
+    <item
+        android:id="@+id/restaurant"
+        android:title="@string/Restaurant"
+        android:icon="@drawable/ic_restaurant"
+        android:orderInCategory="2" />
+
+    <item
+        android:id="@+id/itinerary"
+        android:title=""
+        android:orderInCategory="3" />
+
+    <item
+        android:id="@+id/bus"
+        android:title="@string/Bus"
+        android:icon="@drawable/ic_bus"
+        android:orderInCategory="4" />
+
+    <item
+        android:id="@+id/parking"
+        android:title="@string/Parking"
+        android:icon="@drawable/ic_parking"
+        android:orderInCategory="5" />
+
+</menu>
