@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="orderGuide" >
+        <item>Ordine alfabetico</item>
+        <item>Prezzo crescente</item>
+        <item>Prezzo decrescente</item>
+        <item>Recensioni crescente</item>
+        <item>Recensioni decrescente</item>
+    </string-array>
+</resources>

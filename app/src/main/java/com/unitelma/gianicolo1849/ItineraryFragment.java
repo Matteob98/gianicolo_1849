@@ -41,7 +41,6 @@ public class ItineraryFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
     }
 
     @Override
@@ -49,19 +48,5 @@ public class ItineraryFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_itinerary, container, false);
-    }
-
-    public void stageVisitCardViewClick(View view) {
-        Intent intent = VisitStageActivity.getIntentInstance(getContext());
-        startActivity(intent);
-    }
-
-    public void shareCardViewClick(View view) {
-        Intent intent = ShareActivity.getIntentInstance(getContext());
-        startActivity(intent);
-    }
-
-    public void guideCardViewClick(View view) {
-        Toast.makeText(getContext(), "Contatta una guida", Toast.LENGTH_SHORT).show();
     }
 }

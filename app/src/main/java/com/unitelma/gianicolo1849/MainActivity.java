@@ -5,9 +5,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -25,6 +27,18 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
 
         layoutSettings();
 
+        navBarInitialize(savedInstanceState);
+
+        toolbarInitialize();
+    }
+
+    private void toolbarInitialize() {
+        setSupportActionBar(mToolbar);
+        mToolbar.setTitleTextColor(getResources().getColor(R.color.white));
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+    }
+
+    private void navBarInitialize(Bundle savedInstanceState) {
         mBottomNav.setOnNavigationItemSelectedListener(this);
         mBottomNav.getMenu().getItem(2).setChecked(true);
         mFAB.setImageDrawable(getResources().getDrawable(R.drawable.ic_itinerary_green));
@@ -33,17 +47,6 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
             getSupportFragmentManager().beginTransaction().
                     replace(R.id.frameLayoutItineraryActivity, new ItineraryFragment()).commit();
         }
-
-        mFAB.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mBottomNav.getMenu().getItem(2).setChecked(true);
-                //mFAB.setImageDrawable(getResources().getDrawable(R.drawable.ic_itinerary_green));
-                mFAB.setImageResource(R.drawable.ic_itinerary_green);
-                getSupportFragmentManager().beginTransaction().
-                        replace(R.id.frameLayoutItineraryActivity, new ItineraryFragment()).commit();
-            }
-        });
     }
 
     /**
@@ -77,5 +80,28 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         getSupportFragmentManager().beginTransaction().
                 replace(R.id.frameLayoutItineraryActivity, selectedFragment).commit();
         return true;
+    }
+
+    public void fabNavBarClick(View view) {
+        mBottomNav.getMenu().getItem(2).setChecked(true);
+        mFAB.setImageResource(R.drawable.ic_itinerary_green);
+        getSupportFragmentManager().beginTransaction().
+                replace(R.id.frameLayoutItineraryActivity, new ItineraryFragment()).commit();
+    }
+
+
+    public void stageVisitCardViewClick(View view) {
+        Intent intent = VisitStageActivity.getIntentInstance(this);
+        startActivity(intent);
+    }
+
+    public void shareCardViewClick(View view) {
+        Intent intent = ShareActivity.getIntentInstance(this);
+        startActivity(intent);
+    }
+
+    public void guideCardViewClick(View view) {
+        Intent intent = GuideActivity.getIntentInstance(this);
+        startActivity(intent);
     }
 }

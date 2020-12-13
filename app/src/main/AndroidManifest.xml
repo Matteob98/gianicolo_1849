@@ -9,9 +9,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MaterialComponents.Light.NoActionBar">
-        <activity android:name=".ShareActivity"></activity>
-        <activity android:name=".VisitStageActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".GuideActivity"></activity>
+        <activity android:name=".NotImplementedActivity" />
+        <activity android:name=".ShareActivity" />
+        <activity
+            android:name=".VisitStageActivity"
+            android:parentActivityName=".MainActivity">
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:parentActivityName=".NotImplementedActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
