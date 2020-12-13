@@ -35,12 +35,17 @@ public class VisitStageActivity extends AppCompatActivity {
 
         layoutSettings(); //Item imports from xml
 
+        toolbarSettings();
+
+        mTextView.setText(stageDescription);
+    }
+
+    private void toolbarSettings() {
         mToolbar = findViewById(R.id.toolbarVisitStageActivity);
         setSupportActionBar(mToolbar);
         getSupportActionBar().setTitle("Tappa numero 3");
         mToolbar.setTitleTextColor(getResources().getColor(R.color.white));
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        mTextView.setText(stageDescription);
     }
 
     /**
