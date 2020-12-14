@@ -1,14 +1,22 @@
 package com.unitelma.gianicolo1849;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 
+import android.app.AlertDialog;
+import android.app.DatePickerDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
+import android.widget.CalendarView;
+import android.widget.DatePicker;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
 
 import com.jgabrielfreitas.core.BlurImageView;
 import com.unitelma.gianicolo1849.reservation_fragment.CalendarFragment;
@@ -22,9 +30,11 @@ public class ReserveGuideActivity extends AppCompatActivity {
     private final int fragmentId = R.id.frameLayoutReserveGuideActivity;
     private BlurImageView mImageView;
     private ImageButton mDataIB, mCalendarIB, mTimeIB, mPeopleIB, mResumeIB;
+    private AlertDialog alertDialog;
+    private AlertDialog.Builder alertDialogBuilder;
     private Toolbar mToolbar;
 
-    private enum ReservationFragment {
+    public enum ReservationFragment {
         DATA_INSERT,
         CALENDAR,
         TIME,
@@ -38,11 +48,37 @@ public class ReserveGuideActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reserve_guide);
 
-        layoutsettings();
+        layoutSettings();
 
         toolbarSettings();
 
         initializeCurrentFragment();
+
+        initializeExitAlertDialog();
+    }
+
+    private void initializeExitAlertDialog() {
+        alertDialogBuilder = new AlertDialog.Builder(this);
+        alertDialogBuilder.setTitle("Vuoi uscire?");
+        alertDialogBuilder.setMessage("Se confermi perderai tutti i dati inseriti nella prenotazione");
+
+        alertDialogBuilder.setPositiveButton("No", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                //do null
+                dialog.dismiss();
+            }
+        });
+
+        alertDialogBuilder.setNegativeButton("Esci", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+                finish();
+            }
+        });
+
+        alertDialog = alertDialogBuilder.create();
     }
 
     private void toolbarSettings() {
@@ -61,7 +97,7 @@ public class ReserveGuideActivity extends AppCompatActivity {
     /**
      * Import xml items and initialize items
      */
-    private void layoutsettings() {
+    private void layoutSettings() {
         mToolbar = findViewById(R.id.toolbarReserveGuideActivity);
         mImageView = findViewById(R.id.reserveGuideImageView);
         mDataIB = findViewById(R.id.dataImageButtonReserveGuideActivity);
@@ -70,6 +106,8 @@ public class ReserveGuideActivity extends AppCompatActivity {
         mPeopleIB = findViewById(R.id.peopleImageButtonReserveGuideActivity);
         mResumeIB = findViewById(R.id.resumeImageButtonReserveGuideActivity);
         mImageView.setBlur(2);
+
+
     }
 
     public static Intent getIntentInstance(Context context)
@@ -122,10 +160,6 @@ public class ReserveGuideActivity extends AppCompatActivity {
         fragmentTransaction(ReservationFragment.CALENDAR);
     }
 
-    public void calendarClick(View view) {
-        fragmentTransaction(ReservationFragment.TIME);
-    }
-
     public void peopleNumberClick(View view) {
         fragmentTransaction(ReservationFragment.RESUME);
     }
@@ -136,7 +170,7 @@ public class ReserveGuideActivity extends AppCompatActivity {
         finish();
     }
 
-    private void fragmentTransaction(ReservationFragment fragment) {
+    public void fragmentTransaction(ReservationFragment fragment) {
         Fragment selectedFragment = null;
 
         switch (fragment) {
@@ -144,7 +178,7 @@ public class ReserveGuideActivity extends AppCompatActivity {
                 selectedFragment = new DataInsertFragment();
                 break;
             case CALENDAR:
-                selectedFragment = new CalendarFragment();
+                selectedFragment = new CalendarFragment(this);
                 break;
             case TIME:
                 selectedFragment = new TimeFragment();
@@ -226,5 +260,18 @@ public class ReserveGuideActivity extends AppCompatActivity {
                 mResumeIB.setImageResource(R.drawable.ic_check_accent);
                 break;
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+        alertDialog.show();
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == android.R.id.home) {
+            alertDialog.show();
+        }
+        return true;
     }
 }

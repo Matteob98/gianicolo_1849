@@ -3,6 +3,7 @@ package com.unitelma.gianicolo1849;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 
 import android.content.Intent;
@@ -41,7 +42,9 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
     private void navBarInitialize(Bundle savedInstanceState) {
         mBottomNav.setOnNavigationItemSelectedListener(this);
         mBottomNav.getMenu().getItem(2).setChecked(true);
-        mFAB.setImageDrawable(getResources().getDrawable(R.drawable.ic_itinerary_green));
+
+        mFAB.setImageDrawable(ContextCompat.getDrawable(this, R.drawable.ic_itinerary_green));
+        //mFAB.setImageResource(R.drawable.ic_itinerary_green);
 
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction().
@@ -72,7 +75,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
             case R.id.parking:
             case R.id.restaurant:
                 selectedFragment = new NotImplementedFragment();
-                mFAB.setImageDrawable(getResources().getDrawable(R.drawable.ic_itinerary_light));
+                mFAB.setImageResource(R.drawable.ic_itinerary_light);
                 break;
             default:
                 return false;
@@ -84,7 +87,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
 
     public void fabNavBarClick(View view) {
         mBottomNav.getMenu().getItem(2).setChecked(true);
-        mFAB.setImageResource(R.drawable.ic_itinerary_green);
+        mFAB.setImageDrawable(ContextCompat.getDrawable(this, R.drawable.ic_itinerary_green));
         getSupportFragmentManager().beginTransaction().
                 replace(R.id.frameLayoutItineraryActivity, new ItineraryFragment()).commit();
     }

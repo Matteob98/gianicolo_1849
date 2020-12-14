@@ -41,7 +41,8 @@
                 android:layout_height="80dp"
                 android:layout_width="match_parent"
                 android:id="@+id/imageView1"
-                android:src="@drawable/san_pancrazio_quad"
+                android:src="@drawable/garibaldi"
+                android:scaleType="centerCrop"
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true">
             </ImageView>
@@ -206,7 +207,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Colonna X"
+                                android:text="Porta San Pancrazio"
                                 android:fontFamily="@font/roboto_regular"
                                 android:textColor="@color/black"
                                 android:textSize="22sp" />
@@ -214,7 +215,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Durata: 2 ore"
+                                android:text="Durata: 30 minuti"
                                 android:fontFamily="@font/roboto_bold"
                                 android:textColor="@color/black"
                                 android:textSize="12sp" />
@@ -223,7 +224,8 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/roboto_regular"
-                                android:text="La colonna X è un monumento del MXVII costruita dall'artista Z su commissione del Papa U"
+                                android:layout_marginBottom="5dp"
+                                android:text="Porta San Pancrazio venne difesa tenacemente fino all'ultimo. Dopo un furioso bombardamento la parte alta della porta crollò."
                                 android:textSize="14sp" />
 
 
@@ -317,7 +319,8 @@
                             <ImageView
                                 android:layout_width="100dp"
                                 android:layout_height="100dp"
-                                android:src="@drawable/san_pancrazio_quad"
+                                android:src="@drawable/villa_savorelli"
+                                android:scaleType="centerCrop"
                                 android:layout_alignParentTop="true"
                                 android:layout_centerHorizontal="true"/>
                         </androidx.cardview.widget.CardView>
@@ -331,7 +334,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Colonna X"
+                                android:text="Villa Savorelli"
                                 android:fontFamily="@font/roboto_regular"
                                 android:textColor="@color/black"
                                 android:textSize="22sp" />
@@ -339,7 +342,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Durata: 2 ore"
+                                android:text="Durata: 1 ora"
                                 android:fontFamily="@font/roboto_bold"
                                 android:textColor="@color/black"
                                 android:textSize="12sp" />
@@ -348,7 +351,8 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/roboto_regular"
-                                android:text="La colonna X è un monumento del MXVII costruita dall'artista Z su commissione del Papa U"
+                                android:layout_marginBottom="5dp"
+                                android:text="Villa Savorelli, oggi Villa Aurelia, dopo i combattimenti venne ricostruita e ristrutturata. Dal 1911 è sede dell'Accademia Americana."
                                 android:textSize="14sp" />
 
 
@@ -439,7 +443,8 @@
                             <ImageView
                                 android:layout_width="100dp"
                                 android:layout_height="100dp"
-                                android:src="@drawable/san_pancrazio_quad"
+                                android:src="@drawable/ossario_garibaldino"
+                                android:scaleType="centerCrop"
                                 android:layout_alignParentTop="true"
                                 android:layout_centerHorizontal="true"/>
                         </androidx.cardview.widget.CardView>
@@ -453,7 +458,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Colonna X"
+                                android:text="Mausoleo Garibaldino"
                                 android:fontFamily="@font/roboto_regular"
                                 android:textColor="@color/black"
                                 android:textSize="22sp" />
@@ -461,7 +466,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Durata: 2 ore"
+                                android:text="Durata: 1 ora"
                                 android:fontFamily="@font/roboto_bold"
                                 android:textColor="@color/black"
                                 android:textSize="12sp" />
@@ -470,7 +475,8 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/roboto_regular"
-                                android:text="La colonna X è un monumento del MXVII costruita dall'artista Z su commissione del Papa U"
+                                android:text="In fondo alla cripta vi è la tomba di Goffredo Mameli, il poeta, aiutante di campo di Garibaldi."
+                                android:layout_marginBottom="5dp"
                                 android:textSize="14sp" />
 
 
@@ -532,7 +538,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="22dp"
                     android:layout_marginTop="32dp"
-                    android:layout_marginBottom="10dp"
+                    android:layout_marginBottom="12dp"
                     android:layout_marginEnd="22dp"
                     android:backgroundTint="@color/white"
                     app:cardCornerRadius="10dp"
@@ -543,7 +549,8 @@
                     android:focusable="true"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/imageViewC">
+                    app:layout_constraintTop_toBottomOf="@+id/imageViewC"
+                    app:layout_constraintBottom_toBottomOf="parent">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -562,7 +569,8 @@
                             <ImageView
                                 android:layout_width="100dp"
                                 android:layout_height="100dp"
-                                android:src="@drawable/san_pancrazio_quad"
+                                android:src="@drawable/breccia"
+                                android:scaleType="centerCrop"
                                 android:layout_alignParentTop="true"
                                 android:layout_centerHorizontal="true"/>
                         </androidx.cardview.widget.CardView>
@@ -576,7 +584,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Colonna X"
+                                android:text="La Breccia"
                                 android:fontFamily="@font/roboto_regular"
                                 android:textColor="@color/black"
                                 android:textSize="22sp" />
@@ -584,7 +592,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Durata: 2 ore"
+                                android:text="Durata: 1 ora e 30 minuti"
                                 android:fontFamily="@font/roboto_bold"
                                 android:textColor="@color/black"
                                 android:textSize="12sp" />
@@ -593,12 +601,10 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/roboto_regular"
-                                android:text="La colonna X è un monumento del MXVII costruita dall'artista Z su commissione del Papa U"
+                                android:layout_marginBottom="5dp"
+                                android:text="Quando furono a portata utile, le artiglierie francesi cominciarono a martellare le mura, aprendo numerose brecce."
                                 android:textSize="14sp" />
-
-
                         </LinearLayout>
-
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
             </androidx.constraintlayout.widget.ConstraintLayout>

@@ -62,7 +62,7 @@
                 android:gravity="center"
                 android:textColor="@color/black"
                 android:fontFamily="@font/roboto_regular"
-                android:text="10:00 - 12:00" />
+                android:text="12:30 - 14:30" />
         </com.google.android.material.card.MaterialCardView>
 
         <com.google.android.material.card.MaterialCardView
@@ -83,7 +83,7 @@
                 android:gravity="center"
                 android:textColor="@color/black"
                 android:fontFamily="@font/roboto_regular"
-                android:text="10:00 - 12:00" />
+                android:text="15:00 - 17:00" />
         </com.google.android.material.card.MaterialCardView>
 
         <com.google.android.material.card.MaterialCardView
@@ -104,7 +104,7 @@
                 android:gravity="center"
                 android:textColor="@color/black"
                 android:fontFamily="@font/roboto_regular"
-                android:text="10:00 - 12:00" />
+                android:text="17:30 - 19:30" />
         </com.google.android.material.card.MaterialCardView>
 
         <com.google.android.material.card.MaterialCardView
@@ -125,7 +125,7 @@
                 android:gravity="center"
                 android:textColor="@color/black"
                 android:fontFamily="@font/roboto_regular"
-                android:text="10:00 - 12:00" />
+                android:text="20:00 - 22:00" />
         </com.google.android.material.card.MaterialCardView>
     </LinearLayout>
 </FrameLayout>

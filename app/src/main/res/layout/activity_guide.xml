@@ -85,7 +85,7 @@
                         <ImageView
                             android:layout_width="80dp"
                             android:layout_height="80dp"
-                            android:src="@drawable/san_pancrazio_quad"
+                            android:src="@drawable/avatar_uomo_1"
                             android:layout_alignParentTop="true"
                             android:layout_centerHorizontal="true"/>
                     </androidx.cardview.widget.CardView>
@@ -125,24 +125,24 @@
                                 android:layout_weight="1"
                                 android:text=""/>
                             <ImageView
-                                android:layout_width="22dp"
-                                android:layout_height="22dp"
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
                                 android:src="@drawable/ic_star" />
                             <ImageView
-                                android:layout_width="22dp"
-                                android:layout_height="22dp"
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
                                 android:src="@drawable/ic_star" />
                             <ImageView
-                                android:layout_width="22dp"
-                                android:layout_height="22dp"
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
                                 android:src="@drawable/ic_star" />
                             <ImageView
-                                android:layout_width="22dp"
-                                android:layout_height="22dp"
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
                                 android:src="@drawable/ic_star" />
                             <ImageView
-                                android:layout_width="22dp"
-                                android:layout_height="22dp"
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
                                 android:src="@drawable/ic_star"
                                 android:layout_marginEnd="16dp"/>
 
@@ -185,7 +185,7 @@
                         <ImageView
                             android:layout_width="80dp"
                             android:layout_height="80dp"
-                            android:src="@drawable/san_pancrazio_quad"
+                            android:src="@drawable/avatar_donna_1"
                             android:layout_alignParentTop="true"
                             android:layout_centerHorizontal="true"/>
                     </androidx.cardview.widget.CardView>
@@ -202,7 +202,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Marco Rossi"
+                            android:text="Giulia Bianchi"
                             android:textSize="22sp"
                             android:textColor="@color/black"
                             android:fontFamily="@font/roboto_regular"/>
@@ -215,7 +215,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="10€/h"
+                                android:text="16€/h"
                                 android:textSize="18sp"
                                 android:fontFamily="@font/roboto_regular" />
 
@@ -225,24 +225,24 @@
                                 android:layout_weight="1"
                                 android:text=""/>
                             <ImageView
-                                android:layout_width="22dp"
-                                android:layout_height="22dp"
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
                                 android:src="@drawable/ic_star" />
                             <ImageView
-                                android:layout_width="22dp"
-                                android:layout_height="22dp"
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
                                 android:src="@drawable/ic_star" />
                             <ImageView
-                                android:layout_width="22dp"
-                                android:layout_height="22dp"
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
                                 android:src="@drawable/ic_star" />
                             <ImageView
-                                android:layout_width="22dp"
-                                android:layout_height="22dp"
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
                                 android:src="@drawable/ic_star_empty" />
                             <ImageView
-                                android:layout_width="22dp"
-                                android:layout_height="22dp"
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
                                 android:src="@drawable/ic_star_empty"
                                 android:layout_marginEnd="16dp"/>
 
@@ -285,7 +285,7 @@
                         <ImageView
                             android:layout_width="80dp"
                             android:layout_height="80dp"
-                            android:src="@drawable/san_pancrazio_quad"
+                            android:src="@drawable/avatar_uomo_2"
                             android:layout_alignParentTop="true"
                             android:layout_centerHorizontal="true"/>
                     </androidx.cardview.widget.CardView>
@@ -302,7 +302,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Marco Rossi"
+                            android:text="Fabrizio Moro"
                             android:textSize="22sp"
                             android:textColor="@color/black"
                             android:fontFamily="@font/roboto_regular"/>
@@ -315,7 +315,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="10€/h"
+                                android:text="21€/h"
                                 android:textSize="18sp"
                                 android:fontFamily="@font/roboto_regular" />
 
@@ -325,24 +325,24 @@
                                 android:layout_weight="1"
                                 android:text=""/>
                             <ImageView
-                                android:layout_width="22dp"
-                                android:layout_height="22dp"
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
                                 android:src="@drawable/ic_star" />
                             <ImageView
-                                android:layout_width="22dp"
-                                android:layout_height="22dp"
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
                                 android:src="@drawable/ic_star" />
                             <ImageView
-                                android:layout_width="22dp"
-                                android:layout_height="22dp"
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
                                 android:src="@drawable/ic_star" />
                             <ImageView
-                                android:layout_width="22dp"
-                                android:layout_height="22dp"
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
                                 android:src="@drawable/ic_star" />
                             <ImageView
-                                android:layout_width="22dp"
-                                android:layout_height="22dp"
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
                                 android:src="@drawable/ic_star_empty"
                                 android:layout_marginEnd="16dp"/>
 
@@ -385,7 +385,7 @@
                         <ImageView
                             android:layout_width="80dp"
                             android:layout_height="80dp"
-                            android:src="@drawable/san_pancrazio_quad"
+                            android:src="@drawable/avatar_uomo_3"
                             android:layout_alignParentTop="true"
                             android:layout_centerHorizontal="true"/>
                     </androidx.cardview.widget.CardView>
@@ -402,7 +402,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Marco Rossi"
+                            android:text="Matteo Neri"
                             android:textSize="22sp"
                             android:textColor="@color/black"
                             android:fontFamily="@font/roboto_regular"/>
@@ -425,24 +425,24 @@
                                 android:layout_weight="1"
                                 android:text=""/>
                             <ImageView
-                                android:layout_width="22dp"
-                                android:layout_height="22dp"
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
                                 android:src="@drawable/ic_star" />
                             <ImageView
-                                android:layout_width="22dp"
-                                android:layout_height="22dp"
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
                                 android:src="@drawable/ic_star" />
                             <ImageView
-                                android:layout_width="22dp"
-                                android:layout_height="22dp"
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
                                 android:src="@drawable/ic_star_empty" />
                             <ImageView
-                                android:layout_width="22dp"
-                                android:layout_height="22dp"
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
                                 android:src="@drawable/ic_star_empty" />
                             <ImageView
-                                android:layout_width="22dp"
-                                android:layout_height="22dp"
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
                                 android:src="@drawable/ic_star_empty"
                                 android:layout_marginEnd="16dp"/>
 
@@ -485,7 +485,7 @@
                         <ImageView
                             android:layout_width="80dp"
                             android:layout_height="80dp"
-                            android:src="@drawable/san_pancrazio_quad"
+                            android:src="@drawable/avatar_donna_2"
                             android:layout_alignParentTop="true"
                             android:layout_centerHorizontal="true"/>
                     </androidx.cardview.widget.CardView>
@@ -502,7 +502,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Marco Rossi"
+                            android:text="Gianna Camilli"
                             android:textSize="22sp"
                             android:textColor="@color/black"
                             android:fontFamily="@font/roboto_regular"/>
@@ -515,7 +515,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="10€/h"
+                                android:text="8€/h"
                                 android:textSize="18sp"
                                 android:fontFamily="@font/roboto_regular" />
 
@@ -525,24 +525,24 @@
                                 android:layout_weight="1"
                                 android:text=""/>
                             <ImageView
-                                android:layout_width="22dp"
-                                android:layout_height="22dp"
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
                                 android:src="@drawable/ic_star" />
                             <ImageView
-                                android:layout_width="22dp"
-                                android:layout_height="22dp"
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
                                 android:src="@drawable/ic_star_empty" />
                             <ImageView
-                                android:layout_width="22dp"
-                                android:layout_height="22dp"
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
                                 android:src="@drawable/ic_star_empty" />
                             <ImageView
-                                android:layout_width="22dp"
-                                android:layout_height="22dp"
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
                                 android:src="@drawable/ic_star_empty" />
                             <ImageView
-                                android:layout_width="22dp"
-                                android:layout_height="22dp"
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
                                 android:src="@drawable/ic_star_empty"
                                 android:layout_marginEnd="16dp"/>
 
@@ -585,7 +585,7 @@
                         <ImageView
                             android:layout_width="80dp"
                             android:layout_height="80dp"
-                            android:src="@drawable/san_pancrazio_quad"
+                            android:src="@drawable/avatar_donna_3"
                             android:layout_alignParentTop="true"
                             android:layout_centerHorizontal="true"/>
                     </androidx.cardview.widget.CardView>
@@ -602,7 +602,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Marco Rossi"
+                            android:text="Francesca Paroli"
                             android:textSize="22sp"
                             android:textColor="@color/black"
                             android:fontFamily="@font/roboto_regular"/>
@@ -615,7 +615,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="10€/h"
+                                android:text="13€/h"
                                 android:textSize="18sp"
                                 android:fontFamily="@font/roboto_regular" />
 
@@ -625,24 +625,24 @@
                                 android:layout_weight="1"
                                 android:text=""/>
                             <ImageView
-                                android:layout_width="22dp"
-                                android:layout_height="22dp"
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
                                 android:src="@drawable/ic_star" />
                             <ImageView
-                                android:layout_width="22dp"
-                                android:layout_height="22dp"
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
                                 android:src="@drawable/ic_star" />
                             <ImageView
-                                android:layout_width="22dp"
-                                android:layout_height="22dp"
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
                                 android:src="@drawable/ic_star" />
                             <ImageView
-                                android:layout_width="22dp"
-                                android:layout_height="22dp"
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
                                 android:src="@drawable/ic_star" />
                             <ImageView
-                                android:layout_width="22dp"
-                                android:layout_height="22dp"
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
                                 android:src="@drawable/ic_star"
                                 android:layout_marginEnd="16dp"/>
 
@@ -685,7 +685,7 @@
                         <ImageView
                             android:layout_width="80dp"
                             android:layout_height="80dp"
-                            android:src="@drawable/san_pancrazio_quad"
+                            android:src="@drawable/avatar_uomo_4"
                             android:layout_alignParentTop="true"
                             android:layout_centerHorizontal="true"/>
                     </androidx.cardview.widget.CardView>
@@ -702,7 +702,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Marco Rossi"
+                            android:text="Franco Messina"
                             android:textSize="22sp"
                             android:textColor="@color/black"
                             android:fontFamily="@font/roboto_regular"/>
@@ -715,7 +715,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="10€/h"
+                                android:text="14€/h"
                                 android:textSize="18sp"
                                 android:fontFamily="@font/roboto_regular" />
 
@@ -725,24 +725,24 @@
                                 android:layout_weight="1"
                                 android:text=""/>
                             <ImageView
-                                android:layout_width="22dp"
-                                android:layout_height="22dp"
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
                                 android:src="@drawable/ic_star" />
                             <ImageView
-                                android:layout_width="22dp"
-                                android:layout_height="22dp"
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
                                 android:src="@drawable/ic_star" />
                             <ImageView
-                                android:layout_width="22dp"
-                                android:layout_height="22dp"
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
                                 android:src="@drawable/ic_star" />
                             <ImageView
-                                android:layout_width="22dp"
-                                android:layout_height="22dp"
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
                                 android:src="@drawable/ic_star" />
                             <ImageView
-                                android:layout_width="22dp"
-                                android:layout_height="22dp"
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
                                 android:src="@drawable/ic_star_empty"
                                 android:layout_marginEnd="16dp"/>
 
@@ -785,7 +785,7 @@
                         <ImageView
                             android:layout_width="80dp"
                             android:layout_height="80dp"
-                            android:src="@drawable/san_pancrazio_quad"
+                            android:src="@drawable/avatar_uomo_5"
                             android:layout_alignParentTop="true"
                             android:layout_centerHorizontal="true"/>
                     </androidx.cardview.widget.CardView>
@@ -802,7 +802,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Marco Rossi"
+                            android:text="Paolo D'aversa"
                             android:textSize="22sp"
                             android:textColor="@color/black"
                             android:fontFamily="@font/roboto_regular"/>
@@ -825,24 +825,24 @@
                                 android:layout_weight="1"
                                 android:text=""/>
                             <ImageView
-                                android:layout_width="22dp"
-                                android:layout_height="22dp"
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
                                 android:src="@drawable/ic_star" />
                             <ImageView
-                                android:layout_width="22dp"
-                                android:layout_height="22dp"
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
                                 android:src="@drawable/ic_star" />
                             <ImageView
-                                android:layout_width="22dp"
-                                android:layout_height="22dp"
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
                                 android:src="@drawable/ic_star" />
                             <ImageView
-                                android:layout_width="22dp"
-                                android:layout_height="22dp"
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
                                 android:src="@drawable/ic_star_empty" />
                             <ImageView
-                                android:layout_width="22dp"
-                                android:layout_height="22dp"
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
                                 android:src="@drawable/ic_star_empty"
                                 android:layout_marginEnd="16dp"/>
 
@@ -885,7 +885,7 @@
                         <ImageView
                             android:layout_width="80dp"
                             android:layout_height="80dp"
-                            android:src="@drawable/san_pancrazio_quad"
+                            android:src="@drawable/avatar_donna_4"
                             android:layout_alignParentTop="true"
                             android:layout_centerHorizontal="true"/>
                     </androidx.cardview.widget.CardView>
@@ -902,7 +902,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Marco Rossi"
+                            android:text="Carolina Verde"
                             android:textSize="22sp"
                             android:textColor="@color/black"
                             android:fontFamily="@font/roboto_regular"/>
@@ -915,7 +915,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="10€/h"
+                                android:text="17€/h"
                                 android:textSize="18sp"
                                 android:fontFamily="@font/roboto_regular" />
 
@@ -925,24 +925,24 @@
                                 android:layout_weight="1"
                                 android:text=""/>
                             <ImageView
-                                android:layout_width="22dp"
-                                android:layout_height="22dp"
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
                                 android:src="@drawable/ic_star" />
                             <ImageView
-                                android:layout_width="22dp"
-                                android:layout_height="22dp"
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
                                 android:src="@drawable/ic_star" />
                             <ImageView
-                                android:layout_width="22dp"
-                                android:layout_height="22dp"
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
                                 android:src="@drawable/ic_star" />
                             <ImageView
-                                android:layout_width="22dp"
-                                android:layout_height="22dp"
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
                                 android:src="@drawable/ic_star" />
                             <ImageView
-                                android:layout_width="22dp"
-                                android:layout_height="22dp"
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
                                 android:src="@drawable/ic_star"
                                 android:layout_marginEnd="16dp"/>
 
