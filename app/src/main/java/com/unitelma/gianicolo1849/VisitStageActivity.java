@@ -82,7 +82,14 @@ public class VisitStageActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem menuItem) {
-        shareClick();
+        switch (menuItem.getItemId()) {
+            case android.R.id.home:
+                finish();
+                break;
+            case R.id.shareItem:
+                shareClick();
+                break;
+        }
         return super.onOptionsItemSelected(menuItem);
     }
 
@@ -96,4 +103,5 @@ public class VisitStageActivity extends AppCompatActivity {
         getMenuInflater().inflate(R.menu.visit_stage_menu, menu);
         return true;
     }
+
 }

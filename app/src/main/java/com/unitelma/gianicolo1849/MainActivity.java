@@ -10,7 +10,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -18,7 +17,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 public class MainActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
 
     private Toolbar mToolbar;
-    private FloatingActionButton mFAB;
+    private FloatingActionButton mNotSelectedFAB, mSelectedFAB;
     private BottomNavigationView mBottomNav;
 
     @Override
@@ -43,8 +42,8 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         mBottomNav.setOnNavigationItemSelectedListener(this);
         mBottomNav.getMenu().getItem(2).setChecked(true);
 
-        mFAB.setImageDrawable(ContextCompat.getDrawable(this, R.drawable.ic_itinerary_green));
-        //mFAB.setImageResource(R.drawable.ic_itinerary_green);
+        mNotSelectedFAB.setVisibility(FloatingActionButton.INVISIBLE);
+        mSelectedFAB.setVisibility(FloatingActionButton.VISIBLE);
 
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction().
@@ -60,7 +59,8 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         getWindow().setStatusBarColor(getResources().getColor(R.color.colorPrimaryDark));
 
         mToolbar = findViewById(R.id.toolbarItineraryActivity);
-        mFAB = findViewById(R.id.floatingButtonItineraryActivity);
+        mNotSelectedFAB = findViewById(R.id.notSelectedFloatingButtonItineraryActivity);
+        mSelectedFAB = findViewById(R.id.selectedFloatingButtonItineraryActivity);
         mBottomNav = findViewById(R.id.bottomNavItineraryActivity);
     }
 
@@ -75,7 +75,11 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
             case R.id.parking:
             case R.id.restaurant:
                 selectedFragment = new NotImplementedFragment();
-                mFAB.setImageResource(R.drawable.ic_itinerary_light);
+                mNotSelectedFAB.setVisibility(FloatingActionButton.VISIBLE);
+                mSelectedFAB.setVisibility(FloatingActionButton.INVISIBLE);
+                break;
+            case R.id.itinerary:
+                itineraryClick();
                 break;
             default:
                 return false;
@@ -85,9 +89,14 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         return true;
     }
 
-    public void fabNavBarClick(View view) {
+    public void notSelectedFABNavBarClick(View view) {
+        itineraryClick();
+    }
+
+    public void itineraryClick() {
         mBottomNav.getMenu().getItem(2).setChecked(true);
-        mFAB.setImageDrawable(ContextCompat.getDrawable(this, R.drawable.ic_itinerary_green));
+        mNotSelectedFAB.setVisibility(FloatingActionButton.INVISIBLE);
+        mSelectedFAB.setVisibility(FloatingActionButton.VISIBLE);
         getSupportFragmentManager().beginTransaction().
                 replace(R.id.frameLayoutItineraryActivity, new ItineraryFragment()).commit();
     }
@@ -106,5 +115,14 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
     public void guideCardViewClick(View view) {
         Intent intent = GuideActivity.getIntentInstance(this);
         startActivity(intent);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == android.R.id.home) {
+            Intent intent = NotImplementedActivity.getIntentInstance(this);
+            startActivity(intent);
+        }
+        return true;
     }
 }
