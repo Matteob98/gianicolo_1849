@@ -18,7 +18,6 @@
             android:layout_height="wrap_content"
             android:textSize="22sp"
             android:layout_marginTop="22dp"
-            android:textAllCaps="true"
             android:textColor="@color/black"
             android:fontFamily="@font/roboto_bold"
             android:text="Riassunto" />
@@ -78,6 +77,32 @@
             android:orientation="horizontal">
 
             <TextView
+                android:id="@+id/textView17"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/roboto_regular"
+                android:text="Numero persone: " />
+
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/roboto_regular"
+                android:text="5" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <TextView
                 android:id="@+id/textView14"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -95,29 +120,6 @@
                 android:fontFamily="@font/roboto_bold"
                 android:text="62€" />
 
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="18sp"
-                android:textColor="@color/black"
-                android:fontFamily="@font/roboto_regular"
-                android:text="Metodo di pagamento: " />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="18sp"
-                android:textColor="@color/black"
-                android:fontFamily="@font/roboto_bold"
-                android:text="Contanti" />
         </LinearLayout>
 
         <com.google.android.material.card.MaterialCardView

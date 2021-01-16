@@ -1,34 +1,33 @@
 package com.unitelma.gianicolo1849;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 
 import android.app.AlertDialog;
-import android.app.DatePickerDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.CalendarView;
-import android.widget.DatePicker;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 
-import com.jgabrielfreitas.core.BlurImageView;
 import com.unitelma.gianicolo1849.reservation_fragment.CalendarFragment;
 import com.unitelma.gianicolo1849.reservation_fragment.DataInsertFragment;
 import com.unitelma.gianicolo1849.reservation_fragment.PeopleNumberFragment;
 import com.unitelma.gianicolo1849.reservation_fragment.ResumeReservationFragment;
 import com.unitelma.gianicolo1849.reservation_fragment.TimeFragment;
+import com.unitelma.gianicolo1849.utilities.BlurBuilder;
 
 public class ReserveGuideActivity extends AppCompatActivity {
 
     private final int fragmentId = R.id.frameLayoutReserveGuideActivity;
-    private BlurImageView mImageView;
+    private LinearLayout mImageLinearLayout;
     private ImageButton mDataIB, mCalendarIB, mTimeIB, mPeopleIB, mResumeIB;
     private AlertDialog alertDialog;
     private AlertDialog.Builder alertDialogBuilder;
@@ -85,7 +84,7 @@ public class ReserveGuideActivity extends AppCompatActivity {
         setSupportActionBar(mToolbar);
         mToolbar.setTitleTextColor(getResources().getColor(R.color.white));
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setTitle("Giulia Rossi");
+        getSupportActionBar().setTitle("Itinerario Garibaldino");
     }
 
     private void initializeCurrentFragment() {
@@ -99,14 +98,17 @@ public class ReserveGuideActivity extends AppCompatActivity {
      */
     private void layoutSettings() {
         mToolbar = findViewById(R.id.toolbarReserveGuideActivity);
-        mImageView = findViewById(R.id.reserveGuideImageView);
+        mImageLinearLayout = findViewById(R.id.reserveGuideLinearLayout);
         mDataIB = findViewById(R.id.dataImageButtonReserveGuideActivity);
         mCalendarIB = findViewById(R.id.calendarImageButtonReserveGuideActivity);
         mTimeIB = findViewById(R.id.timeImageButtonReserveGuideActivity);
         mPeopleIB = findViewById(R.id.peopleImageButtonReserveGuideActivity);
         mResumeIB = findViewById(R.id.resumeImageButtonReserveGuideActivity);
-        mImageView.setBlur(2);
 
+
+        Bitmap originalBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.garibaldi);
+        Bitmap blurredBitmap = BlurBuilder.blur( this, originalBitmap );
+        mImageLinearLayout.setBackground(new BitmapDrawable(getResources(), blurredBitmap));
 
     }
 
