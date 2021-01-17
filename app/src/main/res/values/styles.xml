@@ -11,4 +11,15 @@
         <item name="colorAccent">@color/colorPrimary</item>
     </style>
 
+    <!-- <style name="GuideDialogFragment" parent="@android:style/Theme.Panel"> -->
+    <style name="GuideDialogFragment" parent="android:Theme.Material.Light.NoActionBar.Fullscreen">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowAnimationStyle">@style/GuideDialogFragmentAnimation.Window</item>
+    </style>
+
+    <style name="GuideDialogFragmentAnimation.Window" parent="@android:style/Animation.Activity">
+        <item name="android:windowEnterAnimation">@anim/anim_in</item>
+        <item name="android:windowExitAnimation">@anim/anim_out</item>
+    </style>
+
 </resources>

@@ -3,8 +3,11 @@ package com.unitelma.gianicolo1849;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.content.ContextCompat;
+import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -19,6 +22,8 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
     private Toolbar mToolbar;
     private FloatingActionButton mNotSelectedFAB, mSelectedFAB;
     private BottomNavigationView mBottomNav;
+    public boolean existReservation;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +35,8 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         navBarInitialize(savedInstanceState);
 
         toolbarInitialize();
+
+        existReservation = false;
     }
 
     private void toolbarInitialize() {
@@ -62,6 +69,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         mNotSelectedFAB = findViewById(R.id.notSelectedFloatingButtonItineraryActivity);
         mSelectedFAB = findViewById(R.id.selectedFloatingButtonItineraryActivity);
         mBottomNav = findViewById(R.id.bottomNavItineraryActivity);
+
     }
 
     @Override
@@ -112,9 +120,8 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         startActivity(intent);
     }
 
-    public void guideCardViewClick(View view) {
-        Intent intent = GuideActivity.getIntentInstance(this);
-        startActivity(intent);
+    public void reservationCardViewClick(View view) {
+        //Todo implelemnta
     }
 
     @Override

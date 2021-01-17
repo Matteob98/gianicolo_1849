@@ -64,7 +64,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Durata stimata 4 ore"
+            android:text="Durata stimata 2 ore"
             android:textSize="14sp"
             android:layout_marginTop="8dp"
             android:textColor="@color/light_gray"
@@ -87,65 +87,128 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@+id/textView5" />
 
-        <View
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/grayViewItineraryFragment"
             android:layout_width="match_parent"
             android:layout_height="65dp"
             android:background="@color/medium_gray"
-            android:onClick="guideCardViewClick"
-            android:foreground="?android:attr/selectableItemBackground"
             android:clickable="true"
             android:focusable="true"
-            app:layout_constraintTop_toBottomOf="@+id/darkViewItineraryFragment"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:onClick="guideCardViewClick"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/darkViewItineraryFragment">
 
-        <ImageView
-            android:id="@+id/guideButtonItineraryFragment"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:adjustViewBounds="true"
-            android:background="@null"
-            android:elevation="10dp"
-            android:padding="0dp"
-            android:scaleType="fitCenter"
-            android:src="@drawable/ic_guide"
-            app:tint="@color/white"
-            app:layout_constraintBottom_toBottomOf="@+id/grayViewItineraryFragment"
-            app:layout_constraintStart_toStartOf="@+id/itinerayAvatarItineraryFragment"
-            app:layout_constraintTop_toTopOf="@+id/grayViewItineraryFragment" />
+            <ImageView
+                android:id="@+id/guideButtonItineraryFragment"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="16dp"
+                android:adjustViewBounds="true"
+                android:background="@null"
+                android:elevation="10dp"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_guide"
+                app:layout_constraintBottom_toBottomOf="@+id/grayViewItineraryFragment"
+                app:layout_constraintStart_toStartOf="@+id/grayViewItineraryFragment"
+                app:layout_constraintTop_toTopOf="@+id/grayViewItineraryFragment"
+                app:tint="@color/white" />
 
-        <TextView
-            android:id="@+id/textViewGuide"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="8dp"
-            android:text="Contatta una guida"
-            android:textColor="@color/white"
-            android:textSize="18sp"
-            android:fontFamily="@font/roboto_regular"
-            app:layout_constraintTop_toTopOf="@id/grayViewItineraryFragment"
-            app:layout_constraintStart_toEndOf="@id/guideButtonItineraryFragment" />
+            <TextView
+                android:id="@+id/textViewGuide"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/roboto_regular"
+                android:text="Contatta una guida"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:layout_constraintStart_toEndOf="@id/guideButtonItineraryFragment"
+                app:layout_constraintTop_toTopOf="@id/grayViewItineraryFragment" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Prezzi a partire da €10 l'ora"
-            android:textColor="@color/light_gray"
-            android:textSize="14sp"
-            app:layout_constraintTop_toBottomOf="@+id/textViewGuide"
-            app:layout_constraintStart_toStartOf="@id/textViewGuide"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Prezzi a partire da €8 l'ora"
+                android:textColor="@color/light_gray"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@id/textViewGuide"
+                app:layout_constraintTop_toBottomOf="@+id/textViewGuide" />
 
-        <ImageView
-            android:layout_width="16dp"
-            android:layout_height="16dp"
-            android:layout_marginEnd="16dp"
-            android:src="@drawable/ic_right_arrow_white"
-            app:layout_constraintTop_toTopOf="@id/grayViewItineraryFragment"
-            app:layout_constraintBottom_toBottomOf="@id/grayViewItineraryFragment"
-            app:layout_constraintEnd_toEndOf="@id/grayViewItineraryFragment" />
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginEnd="16dp"
+                android:src="@drawable/ic_right_arrow_white"
+                app:layout_constraintBottom_toBottomOf="@id/grayViewItineraryFragment"
+                app:layout_constraintEnd_toEndOf="@id/grayViewItineraryFragment"
+                app:layout_constraintTop_toTopOf="@id/grayViewItineraryFragment" />
 
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/guideViewItineraryFragment"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:background="@color/medium_gray"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:onClick="reservationCardViewClick"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/darkViewItineraryFragment">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/guideButtonItineraryFragment2"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="16dp"
+                android:src="@drawable/avatar_donna_4"
+                app:civ_border_width="0dp"
+                app:civ_border_color="#FF000000"
+                app:layout_constraintTop_toTopOf="@+id/guideViewItineraryFragment"
+                app:layout_constraintBottom_toBottomOf="@+id/guideViewItineraryFragment"
+                app:layout_constraintStart_toStartOf="@+id/guideViewItineraryFragment" />
+
+
+            <TextView
+                android:id="@+id/textViewGuide2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/roboto_regular"
+                android:text="Giulia Bianchi"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:layout_constraintStart_toEndOf="@id/guideButtonItineraryFragment2"
+                app:layout_constraintTop_toTopOf="@id/guideViewItineraryFragment" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Appuntamento il 25/12/2020"
+                android:textColor="@color/light_gray"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@id/textViewGuide2"
+                app:layout_constraintTop_toBottomOf="@+id/textViewGuide2" />
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginEnd="16dp"
+                android:src="@drawable/ic_right_arrow_white"
+                app:layout_constraintBottom_toBottomOf="@id/guideViewItineraryFragment"
+                app:layout_constraintEnd_toEndOf="@id/guideViewItineraryFragment"
+                app:layout_constraintTop_toTopOf="@id/guideViewItineraryFragment" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="0dp"
@@ -514,7 +577,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Durata: 1 ora"
+                                android:text="Durata: 30 minuti"
                                 android:fontFamily="@font/roboto_bold"
                                 android:textColor="@color/black"
                                 android:textSize="12sp" />
@@ -640,7 +703,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Durata: 1 ora e 30 minuti"
+                                android:text="Durata: 30 minuti"
                                 android:fontFamily="@font/roboto_bold"
                                 android:textColor="@color/black"
                                 android:textSize="12sp" />

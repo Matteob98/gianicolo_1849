@@ -43,9 +43,13 @@ public class VisitStageActivity extends AppCompatActivity {
     private void toolbarSettings() {
         mToolbar = findViewById(R.id.toolbarVisitStageActivity);
         setSupportActionBar(mToolbar);
-        getSupportActionBar().setTitle("Tappa numero 3");
-        mToolbar.setTitleTextColor(getResources().getColor(R.color.white));
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setTitle("Tappa numero 1");
+        mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
     }
 
     /**
@@ -83,9 +87,6 @@ public class VisitStageActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem menuItem) {
         switch (menuItem.getItemId()) {
-            case android.R.id.home:
-                finish();
-                break;
             case R.id.shareItem:
                 shareClick();
                 break;

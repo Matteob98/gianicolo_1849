@@ -9,13 +9,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MaterialComponents.Light.NoActionBar">
-        <activity android:name=".ReservationMadeActivity" />
-        <activity
-            android:name=".ReserveGuideActivity"
-            android:parentActivityName=".GuideActivity"/>
-        <activity
-            android:name=".GuideActivity"
-            android:parentActivityName=".MainActivity"/>
         <activity android:name=".NotImplementedActivity" />
         <activity android:name=".ShareActivity" />
         <activity
