@@ -1,5 +1,6 @@
 package com.unitelma.gianicolo1849;
 
+import android.app.Dialog;
 import android.content.DialogInterface;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -12,6 +13,7 @@ import android.widget.Button;
 import android.widget.CalendarView;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.widget.Toolbar;
@@ -22,10 +24,15 @@ import androidx.fragment.app.DialogFragment;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.card.MaterialCardView;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
+import com.google.android.material.textfield.TextInputEditText;
+import com.google.android.material.textfield.TextInputLayout;
+import com.unitelma.gianicolo1849.classes.Reserve;
 import com.unitelma.gianicolo1849.utilities.BlurBuilder;
 
 import java.util.Arrays;
 import java.util.List;
+
+import de.hdodenhof.circleimageview.CircleImageView;
 
 public class ReserveGuideDialogFragment extends DialogFragment{
 
@@ -37,6 +44,8 @@ public class ReserveGuideDialogFragment extends DialogFragment{
     private MaterialAlertDialogBuilder alertDialogBuilder;
     View view;
     private ItineraryFragment activity;
+
+    private Reserve myReserve;
 
     public enum ReservationFragment {
         CHOOSE_GUIDE,
@@ -56,6 +65,20 @@ public class ReserveGuideDialogFragment extends DialogFragment{
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setStyle(STYLE_NORMAL , R.style.GuideDialogFragment);
+
+        myReserve = new Reserve();
+
+    }
+
+    @Override
+    public Dialog onCreateDialog(Bundle savedInstanceState) {
+
+        return new Dialog(getActivity(), getTheme()){
+            @Override
+            public void onBackPressed() {
+                alertDialogBuilder.show();
+            }
+        };
     }
 
     @Override
@@ -160,6 +183,7 @@ public class ReserveGuideDialogFragment extends DialogFragment{
             @Override
             public void onClick(View v) {
                 activity.existReservation=true;
+                activity.myReserve=Reserve.copyOf(myReserve);
                 activity.guideCardViewSettings();
                 dismiss();
             }
@@ -180,10 +204,50 @@ public class ReserveGuideDialogFragment extends DialogFragment{
             card.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    switch (v.getId()) {
+                        case R.id.timeCard1:
+                            myReserve.peopleNumber="1";
+                            break;
+                        case R.id.timeCard2:
+                            myReserve.peopleNumber="2";
+                            break;
+                        case R.id.timeCard3:
+                            myReserve.peopleNumber="3";
+                            break;
+                        case R.id.timeCard4:
+                            myReserve.peopleNumber="4";
+                            break;
+                        case R.id.timeCard5:
+                            myReserve.peopleNumber="5";
+                            break;
+                        case R.id.timeCard6:
+                            myReserve.peopleNumber="6+";
+                            break;
+                    }
+                    resumeLayoutSettings();
                     viewTransaction(ReservationFragment.RESUME);
                 }
             });
         }
+    }
+
+    private void resumeLayoutSettings() {
+        TextView mName = view.findViewById(R.id.myNameReserve);
+        TextView mPhone = view.findViewById(R.id.myPhoneReserve);
+        TextView mEmail = view.findViewById(R.id.myEmailReserve);
+        TextView mData = view.findViewById(R.id.myDataReserve);
+        TextView mTime = view.findViewById(R.id.myTimeReserve);
+        TextView mPeopleNumber = view.findViewById(R.id.myPeopleNumberReserve);
+        TextView mTotalPrice = view.findViewById(R.id.myTotalPriceReserve);
+
+        mName.setText(myReserve.myName);
+        mPhone.setText(myReserve.myPhone);
+        mEmail.setText(myReserve.myEmail);
+        mData.setText(myReserve.date);
+        mTime.setText(myReserve.startTime + "-" + myReserve.endTime);
+        mPeopleNumber.setText(myReserve.peopleNumber);
+        mTotalPrice.setText(myReserve.totalPrice + " €");
+
     }
 
     private void timeClickSettings() {
@@ -200,6 +264,28 @@ public class ReserveGuideDialogFragment extends DialogFragment{
             card.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    switch (v.getId()) {
+                        case R.id.timeViewCard1:
+                            myReserve.startTime="8:00";
+                            myReserve.endTime="10:00";
+                            break;
+                        case R.id.timeViewCard2:
+                            myReserve.startTime="10:00";
+                            myReserve.endTime="12:00";
+                            break;
+                        case R.id.timeViewCard3:
+                            myReserve.startTime="12:00";
+                            myReserve.endTime="14:00";
+                            break;
+                        case R.id.timeViewCard4:
+                            myReserve.startTime="14:00";
+                            myReserve.endTime="16:00";
+                            break;
+                        case R.id.timeViewCard5:
+                            myReserve.startTime="16:00";
+                            myReserve.endTime="18:00";
+                            break;
+                    }
                     viewTransaction(ReservationFragment.PEOPLE);
                 }
             });
@@ -210,6 +296,9 @@ public class ReserveGuideDialogFragment extends DialogFragment{
         calendar.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
             @Override
             public void onSelectedDayChange(@NonNull CalendarView view, int year, int month, int dayOfMonth) {
+
+                myReserve.date = dayOfMonth+"/"+month+1+"/"+year ;
+
                 viewTransaction(ReservationFragment.TIME);
             }
         });
@@ -220,7 +309,49 @@ public class ReserveGuideDialogFragment extends DialogFragment{
         mButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                viewTransaction(ReservationFragment.CALENDAR);
+                TextInputEditText mName = view.findViewById(R.id.editTextTextPersonName);
+                TextInputEditText mPhone = view.findViewById(R.id.editTextPhone);
+                TextInputEditText mEmail = view.findViewById(R.id.editTextTextEmailAddress);
+                TextInputLayout mNameLayout = view.findViewById(R.id.textInputPersonName);
+                TextInputLayout mPhoneLayout = view.findViewById(R.id.textInputPersonPhone);
+                TextInputLayout mEmailLayout = view.findViewById(R.id.textInputPersonEmail);
+
+                myReserve.myName = mName.getText().toString();
+                myReserve.myPhone = mPhone.getText().toString();
+                myReserve.myEmail = mEmail.getText().toString();
+
+                boolean error = false;
+
+                if(myReserve.myName.length()<=0) {
+                    mNameLayout.setErrorEnabled(true);
+                    mNameLayout.setError("Nome non valido");
+                    error = true;
+                }
+                else {
+                    mNameLayout.setErrorEnabled(false);
+                    mNameLayout.setError(null);
+                }
+                if(myReserve.myPhone.length()<=0) {
+                    mPhoneLayout.setErrorEnabled(true);
+                    mPhoneLayout.setError("Numero non valido");
+                    error = true;
+                }
+                else {
+                    mPhoneLayout.setErrorEnabled(false);
+                    mPhoneLayout.setError(null);
+                }
+                if(myReserve.myEmail.length()<=0) {
+                    mEmailLayout.setErrorEnabled(true);
+                    mEmailLayout.setError("Email non valida");
+                    error = true;
+                }
+                else {
+                    mEmailLayout.setErrorEnabled(false);
+                    mEmailLayout.setError(null);
+                }
+
+                if(!error)
+                    viewTransaction(ReservationFragment.CALENDAR);
             }
         });
     }
@@ -236,6 +367,9 @@ public class ReserveGuideDialogFragment extends DialogFragment{
         mCard8 = view.findViewById(R.id.cardView8);
         mCard9 = view.findViewById(R.id.cardView9);
 
+        final TextView mGuideName = view.findViewById(R.id.guideNameReserve);
+        final CircleImageView mCircleImageView = view.findViewById(R.id.profile_image);
+
 
         List<CardView> cards = Arrays.asList(mCard1, mCard2, mCard3, mCard4, mCard5, mCard6, mCard7, mCard8, mCard9);
 
@@ -243,6 +377,55 @@ public class ReserveGuideDialogFragment extends DialogFragment{
             c.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    switch (v.getId()) {
+                        case R.id.cardView1:
+                            myReserve.guideName = "Marco Rossi";
+                            mCircleImageView.setImageResource(R.drawable.avatar_uomo_1);
+                            myReserve.totalPrice=10*2;
+                            break;
+                        case R.id.cardView2:
+                            myReserve.guideName = "Giulia Bianchi";
+                            mCircleImageView.setImageResource(R.drawable.avatar_donna_1);
+                            myReserve.totalPrice=16*2;
+                            break;
+                        case R.id.cardView3:
+                            myReserve.guideName = "Fabrizio Moro";
+                            mCircleImageView.setImageResource(R.drawable.avatar_uomo_2);
+                            myReserve.totalPrice=21*2;
+                            break;
+                        case R.id.cardView4:
+                            myReserve.guideName = "Matteo Neri";
+                            mCircleImageView.setImageResource(R.drawable.avatar_uomo_3);
+                            myReserve.totalPrice=10*2;
+                            break;
+                        case R.id.cardView5:
+                            myReserve.guideName = "Gianna Camilli";
+                            mCircleImageView.setImageResource(R.drawable.avatar_donna_2);
+                            myReserve.totalPrice=8*2;
+                            break;
+                        case R.id.cardView6:
+                            myReserve.guideName = "Francesca Paroli";
+                            mCircleImageView.setImageResource(R.drawable.avatar_donna_3);
+                            myReserve.totalPrice=13*2;
+                            break;
+                        case R.id.cardView7:
+                            myReserve.guideName = "Franco Messina";
+                            mCircleImageView.setImageResource(R.drawable.avatar_uomo_4);
+                            myReserve.totalPrice=14*2;
+                            break;
+                        case R.id.cardView8:
+                            myReserve.guideName = "Paolo D'aversa";
+                            mCircleImageView.setImageResource(R.drawable.avatar_uomo_5);
+                            myReserve.totalPrice=10*2;
+                            break;
+                        case R.id.cardView9:
+                            myReserve.guideName = "Carolina Verde";
+                            mCircleImageView.setImageResource(R.drawable.avatar_donna_4);
+                            myReserve.totalPrice=17*2;
+                            break;
+                    }
+                    mGuideName.setText(myReserve.guideName);
+
                     viewTransaction(ReservationFragment.DATA_INSERT);
                 }
             });

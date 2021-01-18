@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -12,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:elevation="1dp"
-        android:background="@null"
+        android:background="@color/colorPrimary"
         app:titleTextColor="@color/white"
         app:menu="@menu/visit_stage_menu"
         android:paddingEnd="16dp"
@@ -25,32 +26,32 @@
 
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/visitStageImageView"
         android:layout_width="match_parent"
         android:layout_height="280dp"
         android:adjustViewBounds="true"
         android:scaleType="centerCrop"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/san_pancrazio_rect" />
+        app:layout_constraintTop_toBottomOf="@+id/toolbarVisitStageActivity"
+        tools:srcCompat="@drawable/san_pancrazio_quad" />
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/colorBanner"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
-        app:layout_constraintTop_toBottomOf="@id/imageView4"
+        android:layout_height="90dp"
+        app:layout_constraintTop_toBottomOf="@id/visitStageImageView"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:background="@color/colorPrimary" >
+        android:background="@color/medium_gray" >
 
         <TextView
             android:id="@+id/titleTextViewVisitStageActivity"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="22dp"
+            android:layout_marginTop="16dp"
             android:fontFamily="@font/roboto_regular"
             android:text="Porta di San Pancrazio"
             android:textColor="@color/white"
@@ -59,7 +60,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/textView3"
+            android:id="@+id/subtitleTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Vista Piazzale Aurelio"
@@ -72,7 +73,7 @@
             app:layout_constraintTop_toBottomOf="@+id/titleTextViewVisitStageActivity" />
 
         <TextView
-            android:id="@+id/textView4"
+            android:id="@+id/durationTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
@@ -80,9 +81,9 @@
             android:textSize="14sp"
             android:fontFamily="@font/roboto_regular"
             android:textColor="@color/light_gray"
-            app:layout_constraintBottom_toBottomOf="@+id/textView3"
+            app:layout_constraintBottom_toBottomOf="@+id/subtitleTextView"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/textView3" />
+            app:layout_constraintTop_toTopOf="@+id/subtitleTextView" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -104,11 +105,11 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginStart="22dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="22dp"
-        android:layout_marginBottom="24dp"
-        app:layout_constraintBottom_toBottomOf="@+id/containedButton"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="2dp"
+        app:layout_constraintBottom_toTopOf="@+id/containedButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -119,6 +120,9 @@
             android:id="@+id/stageTextViewVisitStageActivity"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:fontFamily="@font/roboto_regular"
+            android:textColor="@color/black"
             tools:text="Testo aggiunto via codice" />
 
     </ScrollView>
@@ -129,6 +133,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
+        android:paddingStart="30dp"
+        android:paddingEnd="30dp"
+        android:layout_marginEnd="30dp"
+        android:gravity="center"
         android:backgroundTint="@color/colorAccent"
         android:onClick="viewMoreClick"
         android:text="Scopri di più"

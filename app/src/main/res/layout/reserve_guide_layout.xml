@@ -55,6 +55,7 @@
                     app:civ_border_color="#FF000000"/>
 
                 <TextView
+                    android:id="@+id/guideNameReserve"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Giulia bianchi"
@@ -1114,7 +1115,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:gravity="center_horizontal"
-        android:visibility="gone"
+        android:visibility="visible"
         android:orientation="vertical"
         android:layout_marginTop="22dp"
         app:layout_constraintTop_toBottomOf="@id/reserveGuideLinearLayout"
@@ -1133,6 +1134,7 @@
             android:text="La tua prenotazione" />
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputPersonName"
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -1152,6 +1154,7 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputPersonPhone"
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -1172,6 +1175,7 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputPersonEmail"
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -1196,7 +1200,7 @@
             android:id="@+id/containedButtonInsertData"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="80dp"
+            android:layout_marginTop="60dp"
             android:layout_marginEnd="30dp"
             android:layout_marginStart="30dp"
             android:text="Conferma i tuoi dati" />
@@ -1545,6 +1549,7 @@
                 android:layout_height="22dp"
                 android:src="@drawable/ic_people_one_light"/>
             <TextView
+                android:id="@+id/myNameReserve"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Matteo"
@@ -1559,6 +1564,7 @@
                 android:layout_marginStart="32dp"
                 android:src="@drawable/ic_phone_light"/>
             <TextView
+                android:id="@+id/myPhoneReserve"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="3934451239"
@@ -1581,6 +1587,7 @@
                 android:layout_height="22dp"
                 android:src="@drawable/ic_email_light"/>
             <TextView
+                android:id="@+id/myEmailReserve"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="email.diprova@sapienza.it"
@@ -1604,6 +1611,7 @@
                 android:src="@drawable/ic_calendar_light"/>
 
             <TextView
+                android:id="@+id/myDataReserve"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="18sp"
@@ -1618,6 +1626,7 @@
                 android:layout_marginStart="32dp"
                 android:src="@drawable/ic_time_light"/>
             <TextView
+                android:id="@+id/myTimeReserve"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="10:00-14:00"
@@ -1641,6 +1650,7 @@
                 android:src="@drawable/ic_people_light"/>
 
             <TextView
+                android:id="@+id/myPeopleNumberReserve"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="18sp"
@@ -1655,6 +1665,7 @@
                 android:layout_marginStart="32dp"
                 android:src="@drawable/ic_money_light"/>
             <TextView
+                android:id="@+id/myTotalPriceReserve"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="55 €"

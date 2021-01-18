@@ -11,11 +11,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.unitelma.gianicolo1849.classes.Reserve;
+
 public class ItineraryFragment extends Fragment {
 
     private View view;
     private ConstraintLayout mGuideLayout, mReservationLayout;
     public boolean existReservation;
+    public Reserve myReserve;
 
     public ItineraryFragment() {
         // Required empty public constructor

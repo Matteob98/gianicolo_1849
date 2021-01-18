@@ -44,7 +44,7 @@
             app:layout_constraintBottom_toBottomOf="parent">
 
             <de.hdodenhof.circleimageview.CircleImageView
-                android:id="@+id/profile_image"
+                android:id="@+id/profile_image_resume"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:src="@drawable/avatar_donna_4"
@@ -52,6 +52,7 @@
                 app:civ_border_color="#FF000000"/>
 
             <TextView
+                android:id="@+id/guide_name_resume"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Giulia bianchi"
@@ -77,6 +78,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="3458823485"
+                android:textIsSelectable="true"
+                android:inputType="phone"
                 android:textSize="18sp"
                 android:layout_marginLeft="16dp"
                 android:fontFamily="@font/roboto_regular"
@@ -99,6 +102,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="email.guida@gianicolo.it"
+                android:textIsSelectable="true"
+                android:inputType="textEmailAddress"
                 android:textSize="18sp"
                 android:layout_marginStart="16dp"
                 android:fontFamily="@font/roboto_regular"
@@ -124,6 +129,7 @@
                 android:layout_height="22dp"
                 android:src="@drawable/ic_people_one_light"/>
             <TextView
+                android:id="@+id/name_reserve"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Matteo"
@@ -138,6 +144,7 @@
                 android:layout_marginStart="32dp"
                 android:src="@drawable/ic_phone_light"/>
             <TextView
+                android:id="@+id/phone_reserve"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="3934451239"
@@ -160,6 +167,7 @@
                 android:layout_height="22dp"
                 android:src="@drawable/ic_email_light"/>
             <TextView
+                android:id="@+id/email_reserve"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="email.diprova@sapienza.it"
@@ -183,6 +191,7 @@
                 android:src="@drawable/ic_calendar_light"/>
 
             <TextView
+                android:id="@+id/data_reserve"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="18sp"
@@ -197,6 +206,7 @@
                 android:layout_marginStart="32dp"
                 android:src="@drawable/ic_time_light"/>
             <TextView
+                android:id="@+id/time_reserve"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="10:00-14:00"
@@ -220,6 +230,7 @@
                 android:src="@drawable/ic_people_light"/>
 
             <TextView
+                android:id="@+id/people_reserve"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="18sp"
@@ -234,6 +245,7 @@
                 android:layout_marginStart="32dp"
                 android:src="@drawable/ic_money_light"/>
             <TextView
+                android:id="@+id/price_reserve"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="55 €"

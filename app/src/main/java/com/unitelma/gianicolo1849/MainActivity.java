@@ -3,11 +3,7 @@ package com.unitelma.gianicolo1849;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-import androidx.constraintlayout.widget.ConstraintLayout;
-import androidx.core.content.ContextCompat;
-import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -16,6 +12,9 @@ import android.view.View;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.unitelma.gianicolo1849.classes.Reserve;
+import com.unitelma.gianicolo1849.notImplemented.NotImplementedActivity;
+import com.unitelma.gianicolo1849.notImplemented.NotImplementedFragment;
 
 public class MainActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
 
@@ -23,7 +22,6 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
     private FloatingActionButton mNotSelectedFAB, mSelectedFAB;
     private BottomNavigationView mBottomNav;
     public boolean existReservation;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -111,7 +109,24 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
 
 
     public void stageVisitCardViewClick(View view) {
-        Intent intent = VisitStageActivity.getIntentInstance(this);
+        int id = view.getId();
+        VisitStageActivity.StageName stage = VisitStageActivity.StageName.SAN_PANCRAZIO;
+
+        switch (id) {
+            case R.id.cardView:
+                stage = VisitStageActivity.StageName.SAN_PANCRAZIO;
+                break;
+            case R.id.cardView2:
+                stage = VisitStageActivity.StageName.VILLA_SAVORELLI;
+                break;
+            case R.id.cardViewC:
+                stage = VisitStageActivity.StageName.MAUSOLEO;
+                break;
+            case R.id.cardViewD:
+                stage = VisitStageActivity.StageName.BRECCIA;
+                break;
+        }
+        Intent intent = VisitStageActivity.getIntentInstance(this, stage);
         startActivity(intent);
     }
 

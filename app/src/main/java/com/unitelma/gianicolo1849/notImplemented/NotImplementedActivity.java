@@ -1,10 +1,12 @@
-package com.unitelma.gianicolo1849;
+package com.unitelma.gianicolo1849.notImplemented;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+
+import com.unitelma.gianicolo1849.R;
 
 public class NotImplementedActivity extends AppCompatActivity {
 
