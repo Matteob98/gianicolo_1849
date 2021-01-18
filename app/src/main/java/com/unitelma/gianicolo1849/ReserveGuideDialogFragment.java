@@ -26,6 +26,7 @@ import com.google.android.material.card.MaterialCardView;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
+import com.google.android.material.transition.MaterialContainerTransform;
 import com.unitelma.gianicolo1849.classes.Reserve;
 import com.unitelma.gianicolo1849.utilities.BlurBuilder;
 
@@ -65,7 +66,6 @@ public class ReserveGuideDialogFragment extends DialogFragment{
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setStyle(STYLE_NORMAL , R.style.GuideDialogFragment);
-
         myReserve = new Reserve();
 
     }

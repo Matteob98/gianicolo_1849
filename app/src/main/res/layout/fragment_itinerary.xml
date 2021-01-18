@@ -87,6 +87,15 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@+id/textView5" />
 
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:transitionName="contact_guide_container"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/darkViewItineraryFragment" />
+
+
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/grayViewItineraryFragment"
             android:layout_width="match_parent"
@@ -191,6 +200,7 @@
                 app:layout_constraintTop_toTopOf="@id/guideViewItineraryFragment" />
 
             <TextView
+                android:id="@+id/myGuideDateTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Appuntamento il 25/12/2020"
@@ -207,6 +217,7 @@
                 app:layout_constraintBottom_toBottomOf="@id/guideViewItineraryFragment"
                 app:layout_constraintEnd_toEndOf="@id/guideViewItineraryFragment"
                 app:layout_constraintTop_toTopOf="@id/guideViewItineraryFragment" />
+
 
         </androidx.constraintlayout.widget.ConstraintLayout>
         <ScrollView

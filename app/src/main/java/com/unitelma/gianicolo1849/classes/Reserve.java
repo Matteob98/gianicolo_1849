@@ -22,7 +22,7 @@ public class Reserve {
         copy.myName = reserve.myName;
         copy.myPhone = reserve.myPhone;
         copy.myEmail = reserve.myEmail;
-        copy.date = reserve.myEmail;
+        copy.date = reserve.date;
         copy.startTime = reserve.startTime;
         copy.endTime = reserve.endTime;
         copy.peopleNumber = reserve.peopleNumber;
